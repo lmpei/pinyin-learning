@@ -23,5 +23,4 @@ app/release/output-metadata.json
 *.apk
 *.aab
 
-# Gradle Wrapper JAR（可选，通常也排除）
-gradle/wrapper/gradle-wrapper.jar
+# 注意：gradle-wrapper.jar 必须提交到 Git，因为它是 Gradle Wrapper 的核心文件
