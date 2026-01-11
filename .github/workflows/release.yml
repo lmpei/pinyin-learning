@@ -53,14 +53,25 @@ jobs:
       - name: Generate APK filename
         id: apk_name
         run: |
-          TAG_NAME=${GITHUB_REF#refs/tags/}
-          APK_NAME="pinyin-learning-${TAG_NAME}.apk"
+          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
+            TAG_NAME=${GITHUB_REF#refs/tags/}
+            APK_NAME="pinyin-learning-${TAG_NAME}.apk"
+          else
+            VERSION_NAME=$(grep 'versionName' app/build.gradle.kts | grep -oP '"\K[^"]+' | head -1)
+            APK_NAME="pinyin-learning-v${VERSION_NAME}.apk"
+          fi
           echo "name=$APK_NAME" >> $GITHUB_OUTPUT
+          echo "APK filename: $APK_NAME"
       
       - name: Rename APK
         run: |
           mkdir -p app/build/outputs/apk/release
-          mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/${{ steps.apk_name.outputs.name }}
+          if [ -f "app/build/outputs/apk/release/app-release.apk" ]; then
+            mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/${{ steps.apk_name.outputs.name }}
+          else
+            echo "Error: APK file not found at app/build/outputs/apk/release/app-release.apk"
+            exit 1
+          fi
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
