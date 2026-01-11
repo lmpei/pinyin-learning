@@ -34,7 +34,9 @@ android {
     signingConfigs {
         if (keystorePropertiesFile.exists()) {
             create("release") {
-                storeFile = file(keystoreProperties["storeFile"] as String)
+                // 使用 rootProject.file() 确保路径相对于项目根目录
+                val keystorePath = keystoreProperties["storeFile"] as String
+                storeFile = rootProject.file(keystorePath)
                 storePassword = keystoreProperties["storePassword"] as String
                 keyAlias = keystoreProperties["keyAlias"] as String
                 keyPassword = keystoreProperties["keyPassword"] as String
