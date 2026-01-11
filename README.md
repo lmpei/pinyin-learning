@@ -68,22 +68,28 @@ PinyinLearning/
 
 ## 📥 下载安装
 
-### 最新版本下载
+### 快速下载
 
-**推荐方式：从 GitHub Releases 下载**
+[![Latest Release](https://img.shields.io/github/v/release/lmpei/pinyin-learning?label=Download&style=for-the-badge&color=green)](https://github.com/lmpei/pinyin-learning/releases/latest)
+[![GitHub downloads](https://img.shields.io/github/downloads/lmpei/pinyin-learning/total?label=Downloads&style=for-the-badge)](https://github.com/lmpei/pinyin-learning/releases)
 
-1. 访问项目的 [Releases 页面](https://github.com/lmpei/pinyin-learning/releases)
-2. 找到最新版本
-3. 下载 `pinyin-learning-*.apk` 文件
+**👉 [点击这里下载最新版本](https://github.com/lmpei/pinyin-learning/releases/latest)**
+
+### 下载步骤
+
+1. 访问 [Releases 页面](https://github.com/lmpei/pinyin-learning/releases)
+2. 找到最新版本（通常在顶部）
+3. 在 **Assets** 部分下载 `*.apk` 文件
 4. 在 Android 设备上安装
 
-> 💡 **提示**：如果 GitHub Releases 中还没有文件，请查看下方的"手动创建 Release"说明。
-
-### 安装步骤
+### 安装说明
 
 1. 在 Android 设备上打开下载的 APK 文件
-2. 如果提示"未知来源"，请在设置中允许安装来自此来源的应用
+2. 如果提示"未知来源"，请在设置中允许安装来自此来源的应用：
+   - 设置 → 安全 → 允许安装未知来源应用
 3. 完成安装后即可使用
+
+> 💡 **提示**：首次安装可能需要授予"安装未知应用"的权限。
 
 ## 项目状态
 
@@ -91,7 +97,7 @@ PinyinLearning/
 
 - 所有核心功能已实现
 - 应用可正常安装和运行
-- APK文件已生成：`app/build/outputs/apk/release/app-release.apk`
+- 最新版本可在 [Releases](https://github.com/lmpei/pinyin-learning/releases) 页面下载
 
 ## 文档导航
 
