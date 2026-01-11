@@ -1,12 +1,7 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/.idea/
 .DS_Store
 /build
 /captures
@@ -19,3 +14,13 @@ keystore.properties
 *.jks
 *.keystore
 keystore/
+
+# 构建产物（Release 相关文件不应提交）
+app/release/*.apk
+app/release/baselineProfiles/
+app/release/output-metadata.json
+*.apk
+*.aab
+
+# Gradle Wrapper JAR（可选，通常也排除）
+gradle/wrapper/gradle-wrapper.jar
