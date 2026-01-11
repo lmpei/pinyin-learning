@@ -14,6 +14,7 @@ keystore.properties
 *.jks
 *.keystore
 keystore/
+keystore-base64.txt
 
 # 构建产物（Release 相关文件不应提交）
 app/release/*.apk
