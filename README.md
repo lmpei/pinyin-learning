@@ -70,12 +70,10 @@ PinyinLearning/
 
 ### 快速下载
 
-[![Releases](https://img.shields.io/badge/Download-Latest%20Release-green?style=for-the-badge)](https://github.com/lmpei/pinyin-learning/releases)
-[![GitHub downloads](https://img.shields.io/github/downloads/lmpei/pinyin-learning/total?label=Total%20Downloads&style=for-the-badge)](https://github.com/lmpei/pinyin-learning/releases)
+[![Latest Release](https://img.shields.io/github/v/release/lmpei/pinyin-learning?label=Download&style=for-the-badge&color=green)](https://github.com/lmpei/pinyin-learning/releases/latest)
+[![GitHub downloads](https://img.shields.io/github/downloads/lmpei/pinyin-learning/total?label=Downloads&style=for-the-badge)](https://github.com/lmpei/pinyin-learning/releases)
 
-**👉 [点击这里访问 Releases 页面下载](https://github.com/lmpei/pinyin-learning/releases)**
-
-> 💡 **提示**：如果还没有 Release，请先[创建第一个 Release](https://github.com/lmpei/pinyin-learning/releases/new)并上传 APK 文件。创建后，徽章会自动更新显示版本信息。
+**👉 [点击这里下载最新版本](https://github.com/lmpei/pinyin-learning/releases/latest)**
 
 ### 下载步骤
 
