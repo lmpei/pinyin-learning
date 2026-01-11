@@ -59,6 +59,7 @@ jobs:
       
       - name: Rename APK
         run: |
+          mkdir -p app/build/outputs/apk/release
           mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/${{ steps.apk_name.outputs.name }}
       
       - name: Create Release
