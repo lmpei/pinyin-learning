@@ -33,6 +33,9 @@ jobs:
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> keystore.properties
           echo "storeFile=keystore/pinyin-learning.jks" >> keystore.properties
       
+      - name: Create keystore directory
+        run: mkdir -p keystore
+      
       - name: Decode keystore file
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore/pinyin-learning.jks
