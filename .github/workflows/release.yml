@@ -64,14 +64,6 @@ jobs:
           echo "name=$TAG_NAME" >> $GITHUB_OUTPUT
           echo "Tag name: $TAG_NAME"
       
-      - name: Create tag if not exists
-        if: github.ref != format('refs/tags/{0}', steps.tag.outputs.name)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag -a "${{ steps.tag.outputs.name }}" -m "Release ${{ steps.tag.outputs.name }}"
-          git push origin "${{ steps.tag.outputs.name }}"
-      
       - name: Generate APK filename
         id: apk_name
         run: |
@@ -93,10 +85,12 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.tag.outputs.name }}
+          name: Release ${{ steps.tag.outputs.name }}
           files: app/build/outputs/apk/release/*.apk
           draft: false
           prerelease: false
           generate_release_notes: true
+          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
